@@ -23,7 +23,7 @@
 
 ## 🌟 Introduction
 
-**TimeFlux** is a modern, minimalist timeline generator designed for developers to showcase their professional journey, projects, and achievements. Instead of wrestling with complex UI code, you manage your career data in a simple `data.yaml` file, and TimeFlux handles the rest—delivering a high-performance, interactive, and beautifully animated web experience.
+**TimeFlux** is a modern, minimalist timeline generator designed for developers to showcase their professional journey, projects, and achievements. Just manage your career data in a simple YAML file, and TimeFlux handles the rest—delivering a high-performance, interactive, and visually stunning web experience.
 
 ## ✨ Key Features
 
@@ -115,6 +115,20 @@ Before committing, run the validation tool to catch errors:
 ```bash
 pnpm validate
 ```
+
+### 🧩 Tech Icons System
+
+TimeFlux automatically maps your `tags` to technology icons.
+
+- **Auto-Matching**: Tags like "React", "AWS", "Python" are automatically matched to their official icons.
+- **Fuzzy Search**: Powered by **Orama** search engine to handle slight name variations.
+- **Custom Aliases**: You can define custom mappings in `public/tech-alias.json`.
+  ```json
+  {
+    "k8s": "kubernetes",
+    "tf": "terraform"
+  }
+  ```
 
 ---
 
