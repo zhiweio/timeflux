@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
 import type { TimelineEvent } from '@/lib/types';
 import { cn } from '@/lib/utils';
-import { TechIcon } from './TechIcon';
 import { TimelineItemWrapper } from './TimelineItemWrapper';
 
 interface CertificateItemProps {
@@ -29,15 +28,6 @@ export function CertificateItem({ event, index, isLeft }: CertificateItemProps) 
               </Badge>
             ))}
           </div>
-
-          {/* Tech Stack Icons (Expanded) */}
-          {isExpanded && event.tags && event.tags.length > 0 && (
-            <div className="flex flex-wrap gap-2 mb-2">
-              {event.tags.map((tag) => (
-                <TechIcon key={tag} tag={tag} />
-              ))}
-            </div>
-          )}
 
           <p className="text-xs md:text-sm text-zinc-600 dark:text-zinc-300 mb-2 leading-snug">
             {event.summary}
