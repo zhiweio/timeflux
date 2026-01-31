@@ -5,6 +5,7 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 import { useState } from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
+import { Markdown } from '@/components/ui/Markdown';
 import type { Profile } from '@/lib/types';
 import { SocialCard } from './SocialCard';
 
@@ -48,9 +49,9 @@ export function ProfileCard({ profile }: ProfileCardProps) {
               <motion.div
                 initial={false}
                 animate={{ height: isExpanded ? 'auto' : 80 }}
-                className="overflow-hidden text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed whitespace-pre-wrap text-left"
+                className="overflow-hidden text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed text-left"
               >
-                {profile.about}
+                <Markdown content={profile.about} />
               </motion.div>
 
               {!isExpanded && (

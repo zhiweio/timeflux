@@ -16,9 +16,11 @@ import {
 import { type ReactNode, useCallback, useState } from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { Markdown } from '@/components/ui/Markdown';
 import type { TimelineEvent } from '@/lib/types';
 import { cn } from '@/lib/utils';
 import { useTimelineAnimation } from '../TimelineContext';
+import { TechIcon } from './TechIcon';
 
 export const icons: Record<string, LucideIcon> = {
   work: Briefcase,
@@ -155,9 +157,18 @@ export function TimelineItemWrapper({ event, index, isLeft, children }: Timeline
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
+                    {/* Tech Stack Icons Row */}
+                    {event.tags && event.tags.length > 0 && (
+                      <div className="flex flex-wrap gap-2 mt-3 mb-2 px-1">
+                        {event.tags.map((tag) => (
+                          <TechIcon key={tag} tag={tag} />
+                        ))}
+                      </div>
+                    )}
+
                     {event.description && (
-                      <div className="text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed border-t border-zinc-100 dark:border-zinc-800 pt-2 mt-1 whitespace-pre-wrap">
-                        {event.description}
+                      <div className="text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed border-t border-zinc-100 dark:border-zinc-800 pt-2 mt-1">
+                        <Markdown content={event.description} />
                       </div>
                     )}
                     {event.link && (

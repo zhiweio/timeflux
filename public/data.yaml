@@ -1,40 +1,98 @@
 profile:
-  name: "Alex Dev"
-  avatar: "https://github.com/shadcn.png"
-  bio: "Full Stack Developer | AI Enthusiast"
+  name: "Zhiwei"
+  avatar: "https://github.com/zhiweio.png"
+  bio: "Data Solution Architect | Building enterprise-grade data platforms"
   about: |
-    I am a passionate Full Stack Developer with over 5 years of experience in building modern web applications.
-    My journey started with a curiosity for how things work on the internet, which led me to dive deep into frontend technologies like React and Next.js, and backend systems using Node.js and Python.
+    I’m a Senior Data Engineer / Tech Lead who builds cloud-native data platforms that are reliable, scalable, and easy to operate. I’ve worked across real-time + batch data systems, from legacy warehouse modernization to modern lakehouse CDP and master data management (MDM) .
 
-    Currently, I focus on:
-    - Building accessible and performant user interfaces.
-    - Exploring the intersection of AI and web development.
-    - Contributing to open source projects that help the developer community.
+    - **What I build:** customer data platforms (CDP), data warehouses/lakehouses, MDM systems, data migration factories, and developer productivity tooling
+    - **How I work:** pragmatic architecture, strong data quality/governance, IaC + CI/CD, and automation-first delivery (including regulated / isolated client environments)
+    - **Tech highlights:** AWS (S3, Redshift, Glue, Lambda, Step Functions, Athena), Azure (Power Platform/Dataverse/Cosmos DB), Spark/Flink/Kafka, Python/SQL, Terraform, GitHub Actions/GitLab CI
+    - **Leadership:** led/mentored engineers, owned end-to-end delivery, and partnered closely with business stakeholders
 
-    When I'm not coding, you can find me hiking, reading sci-fi novels, or experimenting with new coffee brewing methods.
   social:
     github: "https://github.com/zhiweio"
     linkedin: "https://linkedin.com/"
     twitter: "https://twitter.com/"
-    email: "alex@example.com"
+    email: "zhiwei@example.com"
 
 timeline:
-  - startDate: "2023-12"
-    title: "Senior Frontend Engineer"
+  - startDate: "2022-11"
+    title: "Senior Data Engineer"
     type: "work"
-    org: "Tech Giants Inc."
-    summary: "Led the frontend team in refactoring core legacy systems."
+    org: "MegaConsulting Tech Solutions Ltd."
+    summary: "Technical lead for BioLife Sciences, driving digital transformation through cloud migration and modern data architecture."
     description: |
-      Refactored the entire legacy codebase from jQuery to React 18, resulting in a 40% performance improvement.
+      Served as a technical lead and Senior Data Engineer for BioLife Sciences, a global life sciences client, driving digital transformation through large-scale cloud migration and modern data architecture initiatives. Spearheaded the design and implementation of critical data systems including Customer Data Platforms (CDP) and Master Data Management (MDM) solutions. Acted as the primary liaison between business stakeholders and technical teams, ensuring data integrity, scalability, and alignment with strategic business goals within the AWS and Azure ecosystems.
 
-      - Led a team of 5 senior developers.
-      - Implemented a new CI/CD pipeline using GitHub Actions.
-      - Reduced build time by 60% through webpack optimizations.
-    tags: ["React", "Next.js", "Performance"]
-    link: "https://example.com"
-    images:
-      - "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=modern%20web%20dashboard%20clean%20ui%20react%20interface&image_size=landscape_4_3"
-      - "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=developer%20team%20collaborating%20on%20code%20review%20modern%20office&image_size=landscape_4_3"
+      - **Honors & Recognition**: Awarded 'Global Region Outstanding Employee' (2023-2025) and '2024 APAC Bluebolt Innovation Award'.
+      - **Cloud Migration Leadership**: Led the migration of 3,000+ tables and 10TB+ data to AWS, reducing query latency by 40%.
+      - **Lakehouse CDP Architecture**: Architected a modern Lakehouse CDP using AWS Glue, Redshift, and Snowflake for a 360-degree customer view.
+      - **Automation & Open Source**: Designed serverless Redshift sync system and contributed fixes to the open-source Rclone project.
+      - **Team Leadership**: Mentored a team of 4 engineers, overseeing task allocation and technical growth.
+      - **MDM System**: Designed a custom MDM solution using Power Platform and Azure, reducing data discrepancies by 95%.
+      - **Pipeline Optimization**: Refactored core processing workflows in Databricks, reducing daily processing time from 6 hours to 2.5 hours.
+    tags:
+      [
+        "AWS",
+        "Azure",
+        "Cloud Migration",
+        "CDP",
+        "MDM",
+        "Databricks",
+        "Spark",
+        "Python",
+      ]
+
+  - startDate: "2025-12"
+    title: "Resume as Code"
+    type: "project"
+    org: "Personal Project"
+    summary: "AI-powered system to automate the creation of highly tailored resumes."
+    description: |
+      Architected and developed an AI-powered \"Resume as Code\" system to automate the creation of highly tailored, professional resumes. The system leverages Large Language Models (LLMs) and structured data to solve the problems of resume fragmentation, inconsistency, and time-consuming manual tailoring. By maintaining a single \"Master Timeline\" of career data in modular YAML files, the system dynamically assembles targeted resumes for specific job descriptions in minutes.
+
+      - Designed a modular 'Master Timeline' architecture using YAML as a single source of truth.
+      - Implemented a multi-agent AI system using GitHub Copilot and Trae to automate the resume generation workflow.
+      - Integrated the YAMLResume standard for compatibility with a rich ecosystem of themes and export tools.
+      - Developed a comprehensive prompt engineering strategy to match relevant experiences to job descriptions.
+      - Streamlined the application process by reducing tailoring time from hours to minutes.
+    tags:
+      [
+        "LLM",
+        "AI Agents",
+        "Prompt Engineering",
+        "YAML",
+        "Automation",
+        "Resume Generation",
+      ]
+
+  - startDate: "2025-05"
+    endDate: "2025-12"
+    title: "Retail Master Data Management Platform"
+    type: "project"
+    org: "MegaConsulting"
+    summary: "Architected a comprehensive Retail MDM System leveraging Microsoft Power Platform."
+    description: |
+      Architected and developed a comprehensive Retail Master Data Management System leveraging the Microsoft Power Platform ecosystem to centralize and govern retail data assets. The solution integrated Power Apps, Dataverse, and Azure Cloud Services to replace fragmented Excel-based workflows with a robust, version-controlled, and scalable platform.
+
+      - **Enterprise Low-Code Architecture**: Deployed a multi-environment Power Platform solution with ALM using GitHub Actions.
+      - **Billion-Scale Data Architecture**: Designed a high-performance storage layer using Azure Cosmos DB for massive historical data.
+      - **Advanced Custom PCF Controls**: Engineered React/TypeScript components using Fluent UI v8 for Excel-like grid editing.
+      - **Metadata-Driven Framework**: Engineered a dynamic, configuration-based application framework to eliminate development bottlenecks.
+      - **Automated ETL Engineering**: Developed a Python-based tool to auto-generate complex Power Query (M) scripts using Jinja2.
+      - **Cross-Cloud Data Sync**: Established a data bridge between Azure operational systems and AWS analytical warehouses.
+      - **High-Performance Ingestion**: Optimized ingestion pipelines achieving a 30x performance gain (up to 100MB/s).
+    tags:
+      [
+        "Power Platform",
+        "Dataverse",
+        "Azure",
+        "Cosmos DB",
+        "React",
+        "TypeScript",
+        "Python",
+      ]
 
   - startDate: "2025-12"
     title: "AWS Knowledge: AWS Graviton"
@@ -72,59 +130,118 @@ timeline:
     images:
       - "https://images.credly.com/images/6430efe4-0ac0-4df6-8f1b-9559d8fcdf27/image.png"
 
-  - startDate: "2023-03"
-    title: "Azure Data Fundamentals"
-    type: "certificate"
-    org: "Microsoft"
-    summary: "Foundational knowledge of core data concepts on Microsoft Azure."
-    description: |
-      Demonstrated knowledge of how data concepts are implemented using Microsoft Azure data services.
-    tags: ["Azure", "Data", "Cloud"]
-    link: "https://www.credly.com/org/microsoft-certification/badge/microsoft-certified-azure-data-fundamentals"
-    images:
-      - "https://images.credly.com/images/70eb1e3f-d4de-4377-a062-b20fb29594ea/azure-data-fundamentals-600x600.png"
-
-  - startDate: "2023-01"
-    title: "TimeFlux Open Source Launch"
+  - startDate: "2022-11"
+    title: "BioLife Sciences Customer Data Platform (CDP)"
     type: "project"
-    org: "Personal"
-    summary: "Launched a personal timeline generator based on Next.js."
+    org: "MegaConsulting Tech Solutions Ltd."
+    summary: "Architected and engineered the cloud-native CDP to unify fragmented customer data."
     description: |
-      TimeFlux is a modern, minimalist timeline generator that helps developers showcase their career path.
+      Architected and engineered the BioLife Sciences Customer Data Platform (CDP), a mission-critical, cloud-native ecosystem designed to unify fragmented customer data across the enterprise. The solution integrated internal legacy systems and external SaaS platforms (Databricks, Salesforce) into a centralized data lakehouse.
 
-      Key features include:
-      - YAML-based data management
-      - Dual output: Web Interactive + GitHub SVG
-      - Fully responsive design with Framer Motion animations
-    tags: ["Open Source", "Vercel", "Next.js"]
-    link: "https://github.com/alexdev/timeflux"
+      - **Infrastructure as Code**: Designed a modular Terraform architecture and GitHub Actions CI/CD pipelines.
+      - **Salesforce Integration**: Engineered a high-throughput Python SDK for Salesforce Bulk API 2.0 with parallel processing.
+      - **Event-Driven Orchestration**: Utilized AWS Step Functions and EventBridge to coordinate ETL jobs across multiple databases.
+      - **Serverless ETL**: Implemented auto-scaling pipelines using AWS Glue and Lambda, optimizing costs by 40%.
+      - **Security & Governance**: Enforced GDPR compliance using KMS, IAM, and CloudTrail for audit logging.
+      - **Business Impact**: Enabled a 360-degree customer view, increasing marketing engagement rates by 25%.
+    tags:
+      ["AWS", "CDP", "IaC", "Terraform", "Python", "Snowflake", "Databricks"]
 
-  - startDate: "2022-09"
-    endDate: "2023-01"
-    title: "Research Assistant"
+  - startDate: "2022-11"
+    endDate: "2023-05"
+    title: "Enterprise Data Warehouse Migration to AWS"
+    type: "project"
+    org: "MegaConsulting Tech Solutions Ltd."
+    summary: "Spearheaded the strategic modernization of a legacy 10TB+ Enterprise Data Warehouse."
+    description: |
+      Spearheaded the strategic modernization of a legacy 10TB+ Enterprise Data Warehouse, migrating from on-premise SQL Server to a cloud-native Amazon Redshift architecture. Delivered a fully automated, serverless migration factory that ensured data integrity and minimized downtime.
+
+      - **Event-Driven Orchestration**: Architected a migration pipeline using AWS Step Functions and Lambda, reducing overhead by 80%.
+      - **Custom Migration Engine**: Developed 'dm4' utility using `sqlglot` for 99% automated DDL translation accuracy of 2,000+ tables.
+      - **Stream Processing**: Engineered a memory-resident transfer pipeline using UNIX named pipes, accelerating transfer by 300%.
+      - **Redshift Optimization**: Defined optimal DISTKEY/SORTKEY patterns, resulting in a 40% reduction in storage footprint.
+      - **Validation Framework**: Implemented automated row count and checksum verification ensuring 100% data fidelity.
+    tags:
+      [
+        "AWS",
+        "Redshift",
+        "Python",
+        "SQL Server",
+        "Data Migration",
+        "Step Functions",
+      ]
+
+  - startDate: "2021-06"
+    endDate: "2022-11"
+    title: "Data Engineer"
+    type: "work"
+    org: "Patsnap Information Technology (Suzhou) Co. Ltd."
+    summary: "Served as a core Big Data Developer for the TFFI (Technology & Innovation Finance) SaaS product."
+    description: |
+      Served as a core Big Data Developer for the TFFI SaaS product, architecting solutions for 180 million global patent records. Responsible for the design of real-time and offline data warehouses, ensuring stability for analytical reporting.
+
+      - **Spark Diff Engine**: Developed a custom Spark Diff library for minute-level processing of 100M+ analysis records.
+      - **Real-time Architecture**: Built a real-time wide table system using Flink, Kafka, and TiCDC, patching Flink components for compatibility.
+      - **SaaS Infrastructure**: Architected a data lake on AWS S3/Athena for 1.8 billion patents, orchestrated via DolphinScheduler.
+      - **Automated Delivery**: Developed 'Guardian' CD tool integrated with GitLab CI/CD for automated localized deployments.
+      - **Revenue Impact**: Led localized delivery for major banks, generating over 10 million RMB in revenue.
+      - **Agile Leadership**: Technical liaison managing Agile workflows via Jira and Confluence across multiple teams.
+    tags:
+      [
+        "Spark",
+        "Flink",
+        "TiDB",
+        "AWS",
+        "Data Lake",
+        "Real-time Data Warehouse",
+        "Python",
+      ]
+
+  - startDate: "2019-06"
+    endDate: "2021-06"
+    title: "Data Engineer"
+    type: "work"
+    org: "Intsig Information Co., Ltd."
+    summary: "Spearheaded data engineering initiatives for Qixinbao, a leading enterprise business intelligence platform."
+    description: |
+      Spearheaded data engineering initiatives for Qixinbao, a business intelligence platform with 230M+ entities. Architected high-throughput ETL pipelines and modernized DevOps infrastructure.
+
+      - **Distributed ETL**: Architected a Kafka-based ETL service ensuring sub-second data freshness for 230 million entities.
+      - **Data Modeling**: Designed complex models for 1000+ business dimensions including equity and judicial data.
+      - **Optimization Library**: Built a Python ETL library reducing boilerplate code by 90% and accelerating data onboarding.
+      - **Ingestion Tools**: Developed high-performance tools for MySQL/MongoDB with breakpoint resumption.
+      - **Automation**: Built DDL generation tools from Excel dictionaries, ensuring schema synchronization.
+      - **DevOps Transformation**: Migrated to GitLab CI/CD and implemented Agile project management tools.
+    tags:
+      ["Python", "ETL", "Redis", "Kafka", "MySQL", "MongoDB", "CI/CD", "DevOps"]
+
+  - startDate: "2018-03"
+    endDate: "2019-06"
+    title: "Large-scale Distributed Functional Dependency Mining"
     type: "research"
-    org: "AI Lab, University of Technology"
-    summary: "Conducted research on Large Language Model optimization."
+    org: "City University of Technology"
+    summary: "Research and implementation of a distributed functional dependency mining algorithm based on Apache Spark."
     description: |
-      Participated in the "Efficient Transformer Inference" project.
+      Focused on the challenges of mining functional dependencies in massive datasets. Developed a distributed algorithm using Apache Spark to improve processing efficiency and scalability.
 
-      - Proposed a new quantization method for LLMs.
-      - Co-authored a paper published in NeurIPS 2023.
-      - Developed a PyTorch-based simulation framework.
-    tags: ["NLP", "LLM", "PyTorch"]
+      - Designed a partition-based pruning strategy to reduce the search space.
+      - Optimized data shuffle and communication overhead in a distributed cluster.
+      - Validated the algorithm on real-world datasets with high dimensionality.
+      - The research outcomes contributed to winning the Third Prize in a national innovation competition.
+    tags: ["Spark", "Big Data", "Distributed Algorithms", "Data Mining"]
 
-  - startDate: "2022-06"
-    endDate: "2022-09"
-    title: "Master of Computer Science"
+  - startDate: "2015-09"
+    endDate: "2019-07"
+    title: "Bachelor of Computer Science and Technology"
     type: "education"
-    org: "University of Technology"
-    summary: "Graduated with Honors, specializing in AI."
+    org: "City University of Technology"
+    summary: "Awarded Third Prize in the 4th National University Cloud Computing Application Innovation Competition (2018)."
     description: |
-      Specialized in Artificial Intelligence and Human-Computer Interaction.
+      Completed a Bachelor's degree in Computer Science and Technology, focusing on distributed systems and cloud computing.
 
-      Thesis: "Generative AI in Modern Web Development".
-      GPA: 3.9/4.0
-    tags: ["AI", "HCI"]
+      - **Research Project**: "Implementation of Large-scale Distributed Functional Dependency Mining Algorithm Based on Spark".
+      - **Achievements**: Awarded Third Prize in the 4th National University Cloud Computing Application Innovation Competition (2018).
+    tags: ["Computer Science", "Cloud Computing", "Spark", "Data Mining"]
 
   - startDate: "2021-08"
     endDate: "2022-06"
