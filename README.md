@@ -32,7 +32,6 @@
 - **🌙 Native Dark Mode**: Seamlessly switches between light and dark themes with system preference detection.
 - **🎭 Motion Experience**: Silky smooth "scroll-drawing" timeline lines and card entrance animations powered by **Framer Motion**.
 - **✅ Schema Validation**: Built-in **Zod** validation ensures your YAML data is always correct before you deploy.
-- **🔌 Shareable Timeline Cards**: A dedicated API endpoint to generate dynamic SVG cards for your GitHub README or social media.
 - **⚡ Performance Focused**: Built with Next.js 16 App Router and Biome for a blazing fast development and runtime experience.
 
 ## 🚀 Quick Start
@@ -100,12 +99,18 @@ profile:
     github: "https://github.com/alexdev"
 
 timeline:
-  - date: "2024-01"
+  - startDate: "2024-01-01"
+    endDate: "2024-05-01" # Optional: End date if the event is ongoing
     title: "Senior Developer"
     type: "work" # work, internship, project, research, education, competition, award, certificate
     org: "Tech Corp"
     summary: "Led the core team..."
+    description: |
+      - Developed and maintained the company's main product, driving business growth.
+      - Collaborated with cross-functional teams to deliver high-quality features.
     tags: ["React", "TypeScript"]
+    images:
+      - "https://github.com/zhiweio.png"
 ```
 
 ### Validate Your Data
@@ -136,7 +141,7 @@ TimeFlux automatically maps your `tags` to technology icons.
 
 You can fetch your timeline data in JSON format for integration with other services.
 
-**Endpoint:** `GET /api/timeline-card`
+**Endpoint:** `GET /api/timeline`
 
 | Parameter | Type     | Default | Description                |
 | :-------- | :------- | :------ | :------------------------- |
@@ -144,7 +149,7 @@ You can fetch your timeline data in JSON format for integration with other servi
 | `type`    | `string` | `All`   | Filter items by event type |
 
 **Example:**
-`https://your-domain.com/api/timeline-card?count=3&type=work`
+`https://your-domain.com/api/timeline?count=3&type=work`
 
 ---
 
