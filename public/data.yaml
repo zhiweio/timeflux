@@ -1,0 +1,168 @@
+profile:
+  name: "Alex Dev"
+  avatar: "https://github.com/shadcn.png"
+  bio: "Full Stack Developer | AI Enthusiast"
+  about: |
+    I am a passionate Full Stack Developer with over 5 years of experience in building modern web applications.
+    My journey started with a curiosity for how things work on the internet, which led me to dive deep into frontend technologies like React and Next.js, and backend systems using Node.js and Python.
+
+    Currently, I focus on:
+    - Building accessible and performant user interfaces.
+    - Exploring the intersection of AI and web development.
+    - Contributing to open source projects that help the developer community.
+
+    When I'm not coding, you can find me hiking, reading sci-fi novels, or experimenting with new coffee brewing methods.
+  social:
+    github: "https://github.com/zhiweio"
+    linkedin: "https://linkedin.com/"
+    twitter: "https://twitter.com/"
+    email: "alex@example.com"
+
+timeline:
+  - startDate: "2023-12"
+    title: "Senior Frontend Engineer"
+    type: "work"
+    org: "Tech Giants Inc."
+    summary: "Led the frontend team in refactoring core legacy systems."
+    description: |
+      Refactored the entire legacy codebase from jQuery to React 18, resulting in a 40% performance improvement.
+
+      - Led a team of 5 senior developers.
+      - Implemented a new CI/CD pipeline using GitHub Actions.
+      - Reduced build time by 60% through webpack optimizations.
+    tags: ["React", "Next.js", "Performance"]
+    link: "https://example.com"
+    images:
+      - "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=modern%20web%20dashboard%20clean%20ui%20react%20interface&image_size=landscape_4_3"
+      - "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=developer%20team%20collaborating%20on%20code%20review%20modern%20office&image_size=landscape_4_3"
+
+  - startDate: "2025-12"
+    title: "AWS Knowledge: AWS Graviton"
+    type: "certificate"
+    org: "AWS Training and Certification"
+    summary: "Recognized verified knowledge in leveraging Arm-based Graviton processors."
+    description: |
+      Validated expertise in optimizing cloud workloads for performance, cost-efficiency, and sustainability using AWS Graviton.
+    tags: ["AWS", "Graviton", "Cloud"]
+    link: "https://www.credly.com/org/amazon-web-services/badge/aws-knowledge-aws-graviton-training-badge"
+    images:
+      - "https://images.credly.com/images/cdc2269d-dcee-48cf-af3e-6499e1ca37bb/blob"
+
+  - startDate: "2024-09"
+    title: "AWS Certified Developer – Associate"
+    type: "certificate"
+    org: "AWS Training and Certification"
+    summary: "Comprehensive understanding of application life-cycle management on AWS."
+    description: |
+      Proficiency in writing applications with AWS service APIs, AWS CLI, and SDKs; using containers; and deploying with a CI/CD pipeline.
+    tags: ["AWS", "Developer", "Cloud"]
+    link: "https://www.credly.com/org/amazon-web-services/badge/aws-certified-developer-associate"
+    images:
+      - "https://images.credly.com/images/b9feab85-1a43-4f6c-99a5-631b88d5461b/image.png"
+
+  - startDate: "2024-01"
+    title: "AWS Certified Data Analytics – Specialty"
+    type: "certificate"
+    org: "AWS Training and Certification"
+    summary: "In-depth understanding of how to use AWS services for data collection, storage, and processing."
+    description: |
+      Demonstrated ability to leverage AWS analytics tools for deriving business value from data.
+    tags: ["AWS", "Data Analytics", "Cloud"]
+    link: "https://www.credly.com/org/amazon-web-services/badge/aws-certified-data-analytics-specialty"
+    images:
+      - "https://images.credly.com/images/6430efe4-0ac0-4df6-8f1b-9559d8fcdf27/image.png"
+
+  - startDate: "2023-03"
+    title: "Azure Data Fundamentals"
+    type: "certificate"
+    org: "Microsoft"
+    summary: "Foundational knowledge of core data concepts on Microsoft Azure."
+    description: |
+      Demonstrated knowledge of how data concepts are implemented using Microsoft Azure data services.
+    tags: ["Azure", "Data", "Cloud"]
+    link: "https://www.credly.com/org/microsoft-certification/badge/microsoft-certified-azure-data-fundamentals"
+    images:
+      - "https://images.credly.com/images/70eb1e3f-d4de-4377-a062-b20fb29594ea/azure-data-fundamentals-600x600.png"
+
+  - startDate: "2023-01"
+    title: "TimeFlux Open Source Launch"
+    type: "project"
+    org: "Personal"
+    summary: "Launched a personal timeline generator based on Next.js."
+    description: |
+      TimeFlux is a modern, minimalist timeline generator that helps developers showcase their career path.
+
+      Key features include:
+      - YAML-based data management
+      - Dual output: Web Interactive + GitHub SVG
+      - Fully responsive design with Framer Motion animations
+    tags: ["Open Source", "Vercel", "Next.js"]
+    link: "https://github.com/alexdev/timeflux"
+
+  - startDate: "2022-09"
+    endDate: "2023-01"
+    title: "Research Assistant"
+    type: "research"
+    org: "AI Lab, University of Technology"
+    summary: "Conducted research on Large Language Model optimization."
+    description: |
+      Participated in the "Efficient Transformer Inference" project.
+
+      - Proposed a new quantization method for LLMs.
+      - Co-authored a paper published in NeurIPS 2023.
+      - Developed a PyTorch-based simulation framework.
+    tags: ["NLP", "LLM", "PyTorch"]
+
+  - startDate: "2022-06"
+    endDate: "2022-09"
+    title: "Master of Computer Science"
+    type: "education"
+    org: "University of Technology"
+    summary: "Graduated with Honors, specializing in AI."
+    description: |
+      Specialized in Artificial Intelligence and Human-Computer Interaction.
+
+      Thesis: "Generative AI in Modern Web Development".
+      GPA: 3.9/4.0
+    tags: ["AI", "HCI"]
+
+  - startDate: "2021-08"
+    endDate: "2022-06"
+    title: "Software Engineering Intern"
+    type: "internship"
+    org: "StartupHub Inc."
+    summary: "Summer internship focusing on mobile app development."
+    description: |
+      Assisted in the development of the company's flagship React Native app.
+
+      - Fixed 20+ critical bugs in the payment flow.
+      - Implemented a new user onboarding experience.
+    tags: ["React Native", "Mobile", "TypeScript"]
+
+  - startDate: "2021-05"
+    title: "Best Innovation Award"
+    type: "award"
+    org: "Global Hackathon 2021"
+    summary: "First place winner among 500+ global teams."
+    description: |
+      Created an AI-powered accessibility tool for visually impaired developers.
+
+      The tool uses computer vision to describe UI elements in real-time.
+    tags: ["Hackathon", "AI"]
+    images:
+      - "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=hackathon%20winner%20trophy%20glowing%20stage&image_size=landscape_4_3"
+      - "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=team%20presenting%20ai%20project%20on%20stage%20audience&image_size=landscape_4_3"
+      - "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=code%20screen%20accessibility%20tool%20interface%20demo&image_size=landscape_4_3"
+      - "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=happy%20team%20celebrating%20hackathon%20victory&image_size=landscape_4_3"
+
+  - startDate: "2020-11"
+    title: "ACM-ICPC Regional Contest"
+    type: "competition"
+    org: "International Collegiate Programming Contest"
+    summary: "Silver Medalist in the Asia Regional Contest."
+    description: |
+      Competed against top university teams in algorithmic problem solving.
+
+      - Solved 8 out of 12 problems in 5 hours.
+      - Ranked top 10% among all participating teams.
+    tags: ["Algorithm", "C++", "Competitive Programming"]
