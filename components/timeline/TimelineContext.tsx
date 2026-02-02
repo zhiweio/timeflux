@@ -4,7 +4,8 @@ import { createContext, useCallback, useContext, useMemo, useState } from 'react
 
 interface TimelineAnimationContextType {
   isLineHidden: boolean;
-  setLineHidden: (id: string, hidden: boolean) => void;
+  expandedId: string | null;
+  setExpandedId: (id: string | null) => void;
   onAnimationStart: () => void;
   onAnimationComplete: () => void;
 }
@@ -13,7 +14,7 @@ const TimelineAnimationContext = createContext<TimelineAnimationContextType | un
 
 export function TimelineAnimationProvider({ children }: { children: React.ReactNode }) {
   const [animatingCount, setAnimatingCount] = useState(0);
-  const [hiddenIds, setHiddenIds] = useState<Set<string>>(new Set());
+  const [expandedId, setExpandedId] = useState<string | null>(null);
 
   const onAnimationStart = useCallback(() => {
     setAnimatingCount((prev) => prev + 1);
@@ -23,23 +24,16 @@ export function TimelineAnimationProvider({ children }: { children: React.ReactN
     setAnimatingCount((prev) => Math.max(0, prev - 1));
   }, []);
 
-  const setLineHidden = useCallback((id: string, hidden: boolean) => {
-    setHiddenIds((prev) => {
-      const next = new Set(prev);
-      if (hidden) next.add(id);
-      else next.delete(id);
-      return next;
-    });
-  }, []);
-
   const value = useMemo(
     () => ({
-      isLineHidden: animatingCount > 0 || hiddenIds.size > 0,
-      setLineHidden,
+      // Hide line if any animation is running OR if any card is expanded
+      isLineHidden: animatingCount > 0 || expandedId !== null,
+      expandedId,
+      setExpandedId,
       onAnimationStart,
       onAnimationComplete,
     }),
-    [animatingCount, hiddenIds.size, setLineHidden, onAnimationStart, onAnimationComplete],
+    [animatingCount, expandedId, onAnimationStart, onAnimationComplete],
   );
 
   return (

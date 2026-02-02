@@ -13,7 +13,7 @@ import {
   Swords,
   Trophy,
 } from 'lucide-react';
-import { type ReactNode, useCallback, useState } from 'react';
+import { type ReactNode, useCallback, useEffect, useRef } from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Markdown } from '@/components/ui/Markdown';
@@ -41,31 +41,58 @@ interface TimelineItemWrapperProps {
 }
 
 export function TimelineItemWrapper({ event, index, isLeft, children }: TimelineItemWrapperProps) {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const { onAnimationStart, onAnimationComplete, setLineHidden } = useTimelineAnimation();
+  const { onAnimationStart, onAnimationComplete, expandedId, setExpandedId } =
+    useTimelineAnimation();
   const Icon = icons[event.type] || Briefcase;
   const itemId = `${event.startDate}-${event.title}`;
+  const isExpanded = expandedId === itemId;
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  // Auto-collapse when card is completely out of view
+  useEffect(() => {
+    if (!isExpanded || !cardRef.current) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        // Only collapse if completely out of view (ratio === 0)
+        // We use a small threshold to avoid triggering on tiny overlaps
+        if (!entry.isIntersecting) {
+          setExpandedId(null);
+        }
+      },
+      {
+        threshold: 0,
+        rootMargin: '-80px 0px -20px 0px', // Top offset for Navbar (64px) + buffer
+      },
+    );
+
+    observer.observe(cardRef.current);
+    return () => observer.disconnect();
+  }, [isExpanded, setExpandedId]);
 
   const handleToggle = useCallback(() => {
     const nextState = !isExpanded;
-    setIsExpanded(nextState);
-    // If expanding, hide line immediately
-    if (nextState) {
-      setLineHidden(itemId, true);
+    setExpandedId(nextState ? itemId : null);
+
+    // Scroll into view if expanding
+    if (nextState && cardRef.current) {
+      setTimeout(() => {
+        cardRef.current?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'nearest',
+        });
+      }, 100);
     }
-    // If collapsing, we wait for animation complete to show line
-  }, [isExpanded, itemId, setLineHidden]);
+  }, [isExpanded, itemId, setExpandedId]);
 
   const handleAnimationComplete = useCallback(() => {
     onAnimationComplete();
-    // If we just finished collapsing, show line
-    if (!isExpanded) {
-      setLineHidden(itemId, false);
-    }
-  }, [isExpanded, itemId, onAnimationComplete, setLineHidden]);
+  }, [onAnimationComplete]);
 
   return (
     <motion.div
+      ref={cardRef}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-100px' }}
